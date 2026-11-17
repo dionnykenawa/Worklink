@@ -1,0 +1,974 @@
+
+/* =========================================
+   WORKLINK COLOR PALETTE
+========================================= */
+
+:root {
+    --navy: #102f63;
+    --blue: #1876c9;
+    --sky: #eaf4ff;
+    --ink: #19304d;
+    --muted: #5d6e83;
+    --white: #ffffff;
+}
+
+
+/* =========================================
+   GENERAL SETTINGS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--ink);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================
+   NAVIGATION BAR
+========================================= */
+
+header {
+    background-color: var(--white);
+    border-top: 4px solid #e5e7eb;
+    box-shadow: 0 2px 12px rgba(16, 47, 99, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    min-height: 78px;
+    max-width: 1400px;
+    margin: auto;
+    padding: 10px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--navy);
+}
+
+.logo-icon {
+    width: 46px;
+    height: 46px;
+    background: linear-gradient(135deg, #2196ec, var(--navy));
+    color: var(--white);
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    box-shadow: 0 5px 12px rgba(24, 118, 201, 0.25);
+}
+
+.brand-text h2 {
+    font-size: 26px;
+    line-height: 1.1;
+}
+
+.brand-text span {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--navy);
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--blue);
+}
+
+.nav-button {
+    background-color: var(--blue);
+    color: var(--white) !important;
+    padding: 13px 23px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background-color: var(--navy);
+}
+
+
+/* =========================================
+   HOME / HERO SECTION
+========================================= */
+
+.home {
+    min-height: 535px;
+    padding: 80px 7%;
+    background: linear-gradient(
+        115deg,
+        #f0f7ff,
+        #d6ebff,
+        #eaf4ff
+    );
+
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.home-content {
+    max-width: 680px;
+}
+
+.eyebrow {
+    color: var(--blue);
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.home h1 {
+    color: var(--navy);
+    font-size: clamp(44px, 5vw, 70px);
+    line-height: 1.08;
+    letter-spacing: -2px;
+    margin-bottom: 18px;
+}
+
+.home h3 {
+    color: #07549a;
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.home-description {
+    color: var(--ink);
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 650px;
+    margin-bottom: 27px;
+}
+
+.home-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background-color: var(--blue);
+    color: var(--white);
+    border: 2px solid var(--blue);
+}
+
+.primary-btn:hover {
+    background-color: var(--navy);
+    border-color: var(--navy);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: var(--navy);
+    border: 2px solid #78b6f0;
+}
+
+.secondary-btn:hover {
+    background-color: var(--blue);
+    color: var(--white);
+    border-color: var(--blue);
+}
+
+
+/* =========================================
+   HERO PROMOTIONAL CARD
+========================================= */
+
+.hero-card {
+    min-height: 290px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 35px;
+
+    background: linear-gradient(
+        120deg,
+        #103c7c,
+        #1876c9
+    );
+
+    border: 1px solid #07549a;
+    border-radius: 28px;
+    box-shadow: 0 20px 40px rgba(16, 47, 99, 0.18);
+}
+
+.hero-card-content {
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+}
+
+.hero-card h2 {
+    font-size: 27px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.hero-card p {
+    color: #eaf4ff;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.circle {
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+}
+
+.circle-one {
+    width: 210px;
+    height: 210px;
+    top: -95px;
+    right: -35px;
+}
+
+.circle-two {
+    width: 170px;
+    height: 170px;
+    bottom: -100px;
+    right: 35px;
+}
+
+
+/* =========================================
+   GENERAL SECTION SETTINGS
+========================================= */
+
+.section {
+    padding: 85px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 45px;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.section-heading > p:last-child {
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   ABOUT US SECTION
+========================================= */
+
+.about {
+    background-color: var(--white);
+}
+
+.about-background {
+    max-width: 1050px;
+    margin: auto;
+    background-color: var(--sky);
+    border-left: 5px solid var(--blue);
+    padding: 35px;
+    border-radius: 12px;
+}
+
+.about-background h3 {
+    color: var(--navy);
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.about-background p {
+    color: var(--ink);
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+.about-container {
+    max-width: 1050px;
+    margin: 25px auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.about-card {
+    background-color: var(--white);
+    padding: 30px;
+    border: 1px solid #dce8f5;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(16, 47, 99, 0.06);
+    transition: 0.3s;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(16, 47, 99, 0.12);
+}
+
+.card-icon {
+    width: 45px;
+    height: 45px;
+    background-color: var(--sky);
+    color: var(--blue);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.about-card h3 {
+    color: var(--navy);
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.about-card p {
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   SERVICES SECTION
+========================================= */
+
+.services {
+    background-color: var(--sky);
+}
+
+.service-heading {
+    max-width: 1200px;
+    margin: 45px auto 22px;
+}
+
+.service-heading h3 {
+    color: var(--navy);
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.service-heading p {
+    color: var(--muted);
+    font-size: 18px;
+}
+
+.employer-heading {
+    margin-top: 75px;
+}
+
+.job-seeker-services,
+.employer-services {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+/* =========================================
+   SERVICE CARDS
+========================================= */
+
+.job-service-card,
+.employer-service-card {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    background-color: var(--white);
+    border: 1px solid #dce8f5;
+    border-radius: 18px;
+    padding: 30px;
+    min-height: 450px;
+    box-shadow: 0 5px 15px rgba(16, 47, 99, 0.06);
+    transition: 0.3s;
+}
+
+.job-service-card:hover,
+.employer-service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(16, 47, 99, 0.12);
+}
+
+
+/* =========================================
+   PHONE IMAGE CONTAINERS
+========================================= */
+
+.job-service-image,
+.employer-service-image {
+    flex: 0 0 280px;
+    width: 280px;
+    height: 390px;
+    min-width: 280px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--sky);
+    border: 1px solid #dce8f5;
+    border-radius: 18px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.job-service-image img,
+.employer-service-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+
+    transition: transform 0.3s ease;
+}
+
+.job-service-card:hover .job-service-image img,
+.employer-service-card:hover .employer-service-image img {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   SERVICE DESCRIPTION
+========================================= */
+
+.job-service-content,
+.employer-service-content {
+    flex: 1;
+}
+
+.job-service-content h3,
+.employer-service-content h3 {
+    color: var(--navy);
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.job-service-content p,
+.employer-service-content p {
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.9;
+    max-width: 650px;
+}
+
+
+/* =========================================
+   ALTERNATING IMAGE POSITIONS
+========================================= */
+
+.job-service-card:nth-child(even),
+.employer-service-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+
+/* =========================================
+   CALL TO ACTION SECTION
+========================================= */
+
+.cta {
+    background: linear-gradient(
+        120deg,
+        var(--navy),
+        var(--blue)
+    );
+
+    color: var(--white);
+    text-align: center;
+    padding: 85px 7%;
+}
+
+.cta .eyebrow {
+    color: #b8dcff;
+}
+
+.cta h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.cta > p:not(.eyebrow) {
+    color: #e1efff;
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+.cta-container {
+    max-width: 900px;
+    margin: 0 auto 35px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.cta-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 18px;
+    padding: 35px;
+}
+
+.cta-card h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.cta-card p {
+    color: #e1efff;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Main CTA button only */
+
+.main-cta {
+    display: inline-block;
+    background-color: var(--white);
+    color: var(--navy);
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.main-cta:hover {
+    background-color: var(--sky);
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   PROMOTIONAL VIDEO
+========================================= */
+
+.video-section {
+    background-color: var(--white);
+}
+
+.video-container {
+    max-width: 850px;
+    margin: auto;
+    padding: 10px;
+    background-color: var(--navy);
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(16, 47, 99, 0.15);
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+}
+
+
+/* =========================================
+   CONTACT INFORMATION
+========================================= */
+
+.contact {
+    background-color: var(--white);
+    padding: 75px 7%;
+}
+
+.contact-content {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.contact-content h2 {
+    color: var(--navy);
+    font-size: 34px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.contact-content > div:first-child > p:last-child {
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.contact-details {
+    background-color: var(--sky);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.contact-details p {
+    color: var(--ink);
+    font-size: 16px;
+    margin: 12px 0;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.contact-details strong {
+    color: var(--navy);
+}
+
+.contact-details a {
+    color: var(--blue);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.contact-details a:hover {
+    color: var(--navy);
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    background-color: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 35px 7%;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.footer-logo h2 {
+    font-size: 27px;
+}
+
+.footer-logo .logo-icon {
+    background: var(--white);
+    color: var(--navy);
+}
+
+footer > p {
+    color: #d4e7ff;
+    font-size: 16px;
+}
+
+.footer-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 18px;
+    font-size: 15px;
+}
+
+.footer-contact a {
+    color: #d4e7ff;
+    transition: 0.3s;
+}
+
+.footer-contact a:hover {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.footer-contact span {
+    color: #8fb9e4;
+}
+
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 22px;
+    padding-top: 20px;
+    font-size: 15px;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .home {
+        gap: 35px;
+        padding: 65px 5%;
+    }
+
+    .home h1 {
+        font-size: 52px;
+    }
+
+    .navbar {
+        padding: 12px 5%;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .job-service-image,
+    .employer-service-image {
+        flex: 0 0 250px;
+        width: 250px;
+        height: 370px;
+        min-width: 250px;
+    }
+
+    .job-service-card,
+    .employer-service-card {
+        gap: 30px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE TABLET RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .brand {
+        margin-right: auto;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .home {
+        grid-template-columns: 1fr;
+        padding: 65px 7%;
+    }
+
+    .hero-card {
+        min-height: 230px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .job-service-card,
+    .job-service-card:nth-child(even),
+    .employer-service-card,
+    .employer-service-card:nth-child(even) {
+        flex-direction: column;
+        gap: 25px;
+        padding: 25px;
+    }
+
+    .job-service-image,
+    .employer-service-image {
+        flex: none;
+        width: 300px;
+        min-width: 300px;
+        height: 420px;
+        max-width: 100%;
+    }
+
+    .job-service-content,
+    .employer-service-content {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONE RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 550px) {
+
+    .navbar {
+        padding: 12px 5%;
+    }
+
+    .brand-text h2 {
+        font-size: 23px;
+    }
+
+    .nav-button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .home {
+        padding: 50px 6%;
+    }
+
+    .home h1 {
+        font-size: 44px;
+    }
+
+    .home h3 {
+        font-size: 21px;
+    }
+
+    .home-description {
+        font-size: 16px;
+    }
+
+    .hero-card {
+        padding: 25px;
+    }
+
+    .hero-card h2 {
+        font-size: 24px;
+    }
+
+    .section {
+        padding: 65px 6%;
+    }
+
+    .section-heading h2,
+    .cta h2 {
+        font-size: 30px;
+    }
+
+    .section-heading > p:last-child {
+        font-size: 16px;
+    }
+
+    .job-service-image,
+    .employer-service-image {
+        width: 270px;
+        min-width: 270px;
+        height: 390px;
+    }
+
+    .job-service-content h3,
+    .employer-service-content h3 {
+        font-size: 22px;
+    }
+
+    .job-service-content p,
+    .employer-service-content p {
+        font-size: 16px;
+    }
+
+    .cta-container {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-card {
+        padding: 25px;
+    }
+
+    .contact-content h2 {
+        font-size: 29px;
+    }
+
+    .contact-details {
+        padding: 22px;
+    }
+
+    .footer-contact {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .footer-contact span {
+        display: none;
+    }
+
+}
